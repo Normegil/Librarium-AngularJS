@@ -1,0 +1,4 @@
+<ol class="breadcrumb">
+	<li><a ui-sref="home"><span class="glyphicon glyphicon-home"></span></a></li>
+	<li ng-repeat="item in Items"><a ui-sref="{{item.url}}">{{item.name}}</a></li>
+</ol>

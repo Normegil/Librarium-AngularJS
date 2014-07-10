@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Librarium</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css"/>
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="bower_components/ng-grid/ng-grid.css"/>
+	<link rel="stylesheet" href="styles/main.css"/>
+</head>
+<body ng-app="librarium">
+
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+	your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<div class="navbar-header">
+				<button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+				<span class="sr-only">
+					Toggle navigation
+				</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" ui-sref="home">
+					Librarium
+				</a>
+			</div>
+		</div>
+		<div class="collapse navbar-collapse">
+			<ng-menu></ng-menu>
+
+			<div class="navbar-form navbar-right">
+				<ng-search></ng-search>
+			</div>
+			<ng-username></ng-username>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div ui-view></div>
+</div>
+
+<!-- LIBRARIES -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="bower_components/ng-grid/ng-grid-2.0.11.min.js"></script>
+
+<!--[if lt IE 9]>
+<script src="bower_components/es5-shim/es5-shim.js"></script>
+<script src="bower_components/json3/lib/json3.min.js"></script>
+<![endif]-->
+
+<!-- APPLICATION -->
+<script src="scripts/app.js"></script>
+
+<script src="scripts/directives/ngBreadcrumb/ngBreadcrumb.js"></script>
+<script src="scripts/directives/ngSearch/ngSearch.js"></script>
+<script src="scripts/directives/ngUsername/ngUsername.js"></script>
+<script src="scripts/directives/ngMenu/ngMenu.js"></script>
+
+<script src="scripts/services/GamesRESTService.js"></script>
+
+<script src="scripts/controllers/MainController.js"></script>
+<script src="scripts/controllers/GamesList.js"></script>
+
+</body>
+</html>
